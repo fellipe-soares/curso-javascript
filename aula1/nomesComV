@@ -1,0 +1,13 @@
+//3) Faça um programa que dado uma lista de nomes imprima os nomes que começem com a letra "V".
+
+const listaNomes = ['Beatriz', 'Vitoria', 'Joao', 'Victor', 'Isabela', 'Valter'];
+
+for (let i = 0; i < listaNomes.length; i++) {
+    
+    const nome = listaNomes[i];
+    
+    if (nome.slice(0) === 'V'){
+        console.log(nome); 
+    } 
+}
+ 

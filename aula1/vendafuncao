@@ -1,0 +1,34 @@
+function aplicarDesconto (preco,desconto){
+    return preco - (preco*(desconto/100));
+}
+
+function aplicarJuros (preco,juros){
+    return preco + (preco*(juros/100));
+}
+
+
+const preco = 100;
+const pagamento = 4; // 1 = Débito (10% desc) / 2 = PIX (15% desc) / 3 = Ate 2x (preço etiqueta) / 4 = Mais 2x (10% acresc)
+const precoPrazo = preco * 1.1;
+const numeroParcelas = 5;
+
+console.log('Preço do produto:')
+console.log(preco);
+
+if (pagamento === 1) {
+    console.log('Valor a ser pago:')
+        console.log (aplicarDesconto (preco,10));
+}else if (pagamento === 2) {
+    console.log('Valor a ser pago:')
+        console.log (aplicarDesconto (preco,15));
+}else if (pagamento === 3) {
+    console.log('Valor a ser pago:')
+    console.log(preco);
+    console.log('Valor da parcela:')
+    console.log(preco / 2);
+}else if (pagamento === 4) {
+    console.log('Valor a ser pago:')
+    console.log (aplicarJuros (preco,10));
+    console.log('Valor da parcela:')
+    console.log(precoPrazo / numeroParcelas);
+}
